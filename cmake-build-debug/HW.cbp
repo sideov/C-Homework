@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="HW"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\HW1\;CMake Files\HW2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HW1">
+				<Option output="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/HW1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 HW1"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HW1/fast">
+				<Option output="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/HW1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 HW1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HW2">
+				<Option output="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/HW2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 HW2"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HW2/fast">
+				<Option output="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/HW2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 HW2/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW1/functions.cpp">
+			<Option target="HW1"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW1/functions.h">
+			<Option target="HW1"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW1/main.cpp">
+			<Option target="HW1"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW2/functions.cpp">
+			<Option target="HW2"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW2/functions.h">
+			<Option target="HW2"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW2/main.cpp">
+			<Option target="HW2"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\HW1\"/>
+		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\HW2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
