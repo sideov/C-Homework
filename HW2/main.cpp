@@ -6,7 +6,7 @@ using namespace std;
 
 
 int main() {
-    string file_name = "/Users/maximvasilev/CLionProjects/untitled/HW2/f.txt";
+    string file_name = "/Users/maximvasilev/CLionProjects/PR/HW2/f.txt";
     int variant;
     cout << "Вариант: ";
     cin >> variant;
