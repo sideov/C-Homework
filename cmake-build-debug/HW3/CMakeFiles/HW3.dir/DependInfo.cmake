@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/maximvasilev/CLionProjects/PR/HW3/functions.cpp" "/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW3/CMakeFiles/HW3.dir/functions.cpp.o"
+  "/Users/maximvasilev/CLionProjects/PR/HW3/main.cpp" "/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW3/CMakeFiles/HW3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

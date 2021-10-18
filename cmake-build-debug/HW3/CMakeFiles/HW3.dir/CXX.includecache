@@ -15,4 +15,8 @@ iostream
 -
 functions.h
 /Users/maximvasilev/CLionProjects/PR/HW3/functions.h
+cmath
+-
+valarray
+-
 

@@ -188,6 +188,9 @@
 		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW3/functions.h">
 			<Option target="HW3"/>
 		</Unit>
+		<Unit filename="/Users/maximvasilev/CLionProjects/PR/HW3/main.cpp">
+			<Option target="HW3"/>
+		</Unit>
 		<Unit filename="/Users/maximvasilev/CLionProjects/PR/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

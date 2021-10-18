@@ -154,6 +154,30 @@ functions.cpp.s:
 	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/functions.cpp.s
 .PHONY : functions.cpp.s
 
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,6 +190,9 @@ help:
 	@echo "... functions.o"
 	@echo "... functions.i"
 	@echo "... functions.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
