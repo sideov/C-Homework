@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles /Users/maximvasilev/CLionProjects/PR/cmake-build-debug//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW3//CMakeFiles/progress.marks
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,57 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named HW1
+# Convenience name for target.
+HW3/CMakeFiles/HW3.dir/rule:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3/CMakeFiles/HW3.dir/rule
+.PHONY : HW3/CMakeFiles/HW3.dir/rule
 
-# Build rule for target.
-HW1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW1
-.PHONY : HW1
-
-# fast build rule for target.
-HW1/fast:
-	$(MAKE) $(MAKESILENT) -f HW1/CMakeFiles/HW1.dir/build.make HW1/CMakeFiles/HW1.dir/build
-.PHONY : HW1/fast
-
-#=============================================================================
-# Target rules for targets named HW2
-
-# Build rule for target.
-HW2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW2
-.PHONY : HW2
-
-# fast build rule for target.
-HW2/fast:
-	$(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/HW2.dir/build.make HW2/CMakeFiles/HW2.dir/build
-.PHONY : HW2/fast
-
-#=============================================================================
-# Target rules for targets named HW3
-
-# Build rule for target.
-HW3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3
+# Convenience name for target.
+HW3: HW3/CMakeFiles/HW3.dir/rule
 .PHONY : HW3
 
 # fast build rule for target.
 HW3/fast:
-	$(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/build
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/build
 .PHONY : HW3/fast
+
+functions.o: functions.cpp.o
+.PHONY : functions.o
+
+# target to build an object file
+functions.cpp.o:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/functions.cpp.o
+.PHONY : functions.cpp.o
+
+functions.i: functions.cpp.i
+.PHONY : functions.i
+
+# target to preprocess a source file
+functions.cpp.i:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/functions.cpp.i
+.PHONY : functions.cpp.i
+
+functions.s: functions.cpp.s
+.PHONY : functions.s
+
+# target to generate assembly for a file
+functions.cpp.s:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/functions.cpp.s
+.PHONY : functions.cpp.s
 
 # Help Target
 help:
@@ -163,9 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HW1"
-	@echo "... HW2"
 	@echo "... HW3"
+	@echo "... functions.o"
+	@echo "... functions.i"
+	@echo "... functions.s"
 .PHONY : help
 
 
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

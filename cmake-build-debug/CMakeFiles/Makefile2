@@ -65,16 +65,19 @@ CMAKE_BINARY_DIR = /Users/maximvasilev/CLionProjects/PR/cmake-build-debug
 # The main recursive "all" target.
 all: HW1/all
 all: HW2/all
+all: HW3/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: HW1/preinstall
 preinstall: HW2/preinstall
+preinstall: HW3/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: HW1/clean
 clean: HW2/clean
+clean: HW3/clean
 .PHONY : clean
 
 #=============================================================================
@@ -106,6 +109,21 @@ HW2/preinstall:
 # Recursive "clean" directory target.
 HW2/clean: HW2/CMakeFiles/HW2.dir/clean
 .PHONY : HW2/clean
+
+#=============================================================================
+# Directory level rules for directory HW3
+
+# Recursive "all" directory target.
+HW3/all: HW3/CMakeFiles/HW3.dir/all
+.PHONY : HW3/all
+
+# Recursive "preinstall" directory target.
+HW3/preinstall:
+.PHONY : HW3/preinstall
+
+# Recursive "clean" directory target.
+HW3/clean: HW3/CMakeFiles/HW3.dir/clean
+.PHONY : HW3/clean
 
 #=============================================================================
 # Target rules for target HW1/CMakeFiles/HW1.dir
@@ -158,6 +176,32 @@ HW2: HW2/CMakeFiles/HW2.dir/rule
 HW2/CMakeFiles/HW2.dir/clean:
 	$(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/HW2.dir/build.make HW2/CMakeFiles/HW2.dir/clean
 .PHONY : HW2/CMakeFiles/HW2.dir/clean
+
+#=============================================================================
+# Target rules for target HW3/CMakeFiles/HW3.dir
+
+# All Build rule for target.
+HW3/CMakeFiles/HW3.dir/all:
+	$(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/depend
+	$(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target HW3"
+.PHONY : HW3/CMakeFiles/HW3.dir/all
+
+# Build rule for subdir invocation for target.
+HW3/CMakeFiles/HW3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW3/CMakeFiles/HW3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles 0
+.PHONY : HW3/CMakeFiles/HW3.dir/rule
+
+# Convenience name for target.
+HW3: HW3/CMakeFiles/HW3.dir/rule
+.PHONY : HW3
+
+# clean rule for target.
+HW3/CMakeFiles/HW3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f HW3/CMakeFiles/HW3.dir/build.make HW3/CMakeFiles/HW3.dir/clean
+.PHONY : HW3/CMakeFiles/HW3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
