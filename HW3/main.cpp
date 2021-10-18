@@ -45,7 +45,7 @@ int main() {
     int left_bar = 0;
     int cur_bar = -1;
 
-
+    /*
     for (int q = 0; q<l-2; q++) {
         cout << "Barriers[" << q << "].x = " << Barriers[q].x << endl;
         cout << "Barriers[" << q << "].h = " << Barriers[q].h << endl;
@@ -53,6 +53,7 @@ int main() {
 
     cout << V.x << " " << V.y << endl;
     cout << h << endl;
+     */
 
 
 
@@ -62,12 +63,13 @@ int main() {
 
     while (true) {
         if (flag) break;
-
+        /*
         cout << "---------------" << endl;
         cout << "Point.x = " << Point.x << endl;
         cout << "Point.y = " << Point.y << endl;
         cout << "V.x = " << V.x << endl;
         cout << "V.y = " << V.y << endl;
+         */
 
         double fall_time_1 = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
         double fall_time_2 = (V.y - sqrt(V.y*V.y+2*g*Point.y))/g;
@@ -77,16 +79,16 @@ int main() {
             fall_time = fall_time_1;
         } else fall_time = fall_time_2;
 
-        cout << "fall_time = " << fall_time << endl;
+        //cout << "fall_time = " << fall_time << endl;
         int direction = V.x/abs(V.x);
         int m = cur_bar + direction;
 
         while (true) {
-            cout << "m = " << m << endl;
             double x = Barriers[m].x;
             double bar = Barriers[m].h;
             double t = (x - Point.x) / V.x;
-            cout << "t = " << t << endl;
+            //cout << "m = " << m << endl;
+            //cout << "t = " << t << endl;
 
             if (m < 0) {
                 cout << 0 << endl;
@@ -99,16 +101,16 @@ int main() {
 
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
-                cout << "Шар упал в точке x = " << x_fall << endl;
+                //cout << "Шар упал в точке x = " << x_fall << endl;
                 flag = true;
                 break;
             }
             double y = Point.y + V.y * t - (g * t * t) / 2;
-            cout << "y = " << y << endl;
-            cout << "h = " << bar << endl;
+            //cout << "y = " << y << endl;
+            //cout << "h = " << bar << endl;
 
             if (y >= bar) {
-                cout << "Перелет" << endl;
+                //cout << "Перелет" << endl;
                 m += direction;
                 continue;
             } else {
@@ -116,7 +118,7 @@ int main() {
                 V.y = V.y - g*t;
                 Point.x = x;
                 Point.y = y;
-                cout << "Попали в препятствие с m = " << m <<  endl;
+                //cout << "Попали в препятствие с m = " << m <<  endl;
                 cur_bar = m;
                 break;
 
