@@ -42,7 +42,6 @@ int main() {
     Point Point{};
     Point.x = 0;
     Point.y = h;
-    int left_bar = 0;
     int cur_bar = -1;
 
     /*
@@ -53,7 +52,8 @@ int main() {
 
     cout << V.x << " " << V.y << endl;
     cout << h << endl;
-     */
+    */
+
 
 
 
@@ -101,7 +101,7 @@ int main() {
 
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
+                cout << "Шар упал в точке x = " << x_fall << endl;
                 flag = true;
                 break;
             }
@@ -125,6 +125,9 @@ int main() {
             }
         }
     }
+
+    if (x_fall < Barriers[0].x) cout << 0;
+
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
