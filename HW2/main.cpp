@@ -14,14 +14,17 @@ int main() {
     cin >> file_name;
     double h;
 
-    ifstream input(file_name);
-    char *str = new char[1024];
-    int l = -1;
-    while (!input.eof()) {
-        input.getline(str, 1024, '\n');
+    char *str = new char [1024];
+    int l=0;
+    ifstream base(file_name);
+    while (!base.eof())
+    {
+        base.getline(str, 1024, '\n');
         l++;
     }
-    input.close();
+    base.close();
+    system ("pause");
+
 
     ifstream file(file_name);
     Barrier Barriers[l];
