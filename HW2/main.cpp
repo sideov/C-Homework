@@ -23,7 +23,6 @@ int main() {
         l++;
     }
     base.close();
-    system ("pause");
 
 
     ifstream file(file_name);

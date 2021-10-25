@@ -11,16 +11,15 @@ int main() {
     //cout << "Вариант: ";
     //cin >> variant;
 
-    ifstream input(file_name); // создаем объект класса ifstream
     char *str = new char [1024];
     int l=0;
-    while (!input.eof())
+    ifstream base(file_name);
+    while (!base.eof())
     {
-        input.getline(str, 1024, '\n');
+        base.getline(str, 1024, '\n');
         l++;
     }
-    //cout << "l = " << l << endl;
-    input.close();
+    base.close();
 
     ifstream file(file_name); // создаем объект класса ifstream
     Vector2D Vectors[l];
@@ -80,6 +79,6 @@ int main() {
         }
     }
 
-        cout << "Leftmost " << Leftmost.x << " " << Leftmost.y << endl;
-        cout << "Rightmost " << Rightmost.x << " " << Rightmost.y << endl;
+    cout << "Leftmost " << Leftmost.x << " " << Leftmost.y << endl;
+    cout << "Rightmost " << Rightmost.x << " " << Rightmost.y << endl;
 }
