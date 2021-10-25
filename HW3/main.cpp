@@ -101,7 +101,7 @@ int main() {
 
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
-                cout << "Шар упал в точке x = " << x_fall << endl;
+                //cout << "Шар упал в точке x = " << x_fall << endl;
                 flag = true;
                 break;
             }
