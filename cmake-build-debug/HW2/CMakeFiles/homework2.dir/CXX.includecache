@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/maximvasilev/CLionProjects/PR/HW2/functions.h
+
+/Users/maximvasilev/CLionProjects/PR/HW2/main.cpp
+fstream
+-
+iostream
+-
+functions.h
+/Users/maximvasilev/CLionProjects/PR/HW2/functions.h
+cmath
+-
+valarray
+-
+
