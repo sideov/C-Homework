@@ -1,43 +1,58 @@
-#include <iostream>
 #include <cmath>
 #include "functions.h"
 
-
-int fact(int n, int res) {
-    if (n >= 2) {
-        res = n * fact(n-1);
-    }
-    return res;
+double operator*(Vector2D V1, Vector2D V2){
+    double s = V1.x*V2.x + V1.y*V2.y;
+    return s;
 }
 
-long binomial(int n, int k) {
-    if (k > n) {
-        return 0;
+double angle(Vector2D V1, Vector2D V2){
+    double angle = acos((V1 * V2)/(sqrt(V1*V1) * sqrt(V2*V2)));
+    return angle;
+}
+
+bool isright(Vector2D V1, Vector2D V2) {
+    double a = V1.x;
+    double b = V1.y;
+    double x0 = V2.x;
+    double y0 = V2.y;
+    double h;
+
+    if (a != 0) {
+        h = -(y0 - b / a * x0);
     }
     else {
-        long C = fact(n) / (fact(k) * fact(n - k));
-        return C;
+        if (b > 0) h = x0;
+        else h = -x0;
     }
+
+    //cout << "h = " << h << endl;
+
+    if (a >= 0) {
+        if (h >= 0) return true;
+        else return false;
+    }
+    else {
+        if (h > 0) return false;
+        else return true;
+    }
+
 }
 
-float* create_setka(float x_0, float x_max, float step) {
-    int length = (x_max - x_0)/step+1;
-    float* massive = new float[length];
+double distance(Vector2D V1, Vector2D V2) {
+    double a = V1.x;
+    double b = V1.y;
+    double x0 = V2.x;
+    double y0 = V2.y;
+    double h;
 
-    for (int i = 0; i < length; i++) {
-        massive[i] = x_0 + i * step;
+    if (b == 0 and a != 0) {
+        h = abs(y0);
     }
-
-    return massive;
-}
-
-float* func(const float *X, int len) {
-
-    float *Y = new float[len];
-
-    for (int i = 0; i < len; i++) {
-        float x = X[i];
-        Y[i] = cos(x)/sqrt(5-pow(x,3));
+    else if (a == 0 and b != 0){
+        h = abs(x0);
     }
-    return Y;
+    else h = abs(b * x0 - a * y0) / sqrt(a * a + b * b);
+
+    return h;
 }

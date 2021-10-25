@@ -1,7 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 
-link = '/Users/maximvasilev/CLionProjects/PR/HW2/f.txt'
+link = '/Users/maximvasilev/CLionProjects/PR/HW1/in.txt'
 
 file = open(link)
 X = []

@@ -1,10 +1,16 @@
 
-#ifndef UNTITLED1_FUNCTIONS_H
-#define UNTITLED1_FUNCTIONS_H
+#ifndef UNTITLED_FUNCTIONS_H
+#define UNTITLED_FUNCTIONS_H
 
-int fact(int n, int res=1);
-long binomial(int n, int k);
-float* create_setka(float x_0, float x_max, float step);
-float* func(float* X, int len);
+struct Vector2D {
+    double x;
+    double y;
+};
 
-#endif //UNTITLED1_FUNCTIONS_H
+double operator*(Vector2D V1, Vector2D V2);
+double angle(Vector2D V1, Vector2D V2);
+bool isright(Vector2D V1, Vector2D V2);
+double distance(Vector2D V1, Vector2D V2);
+
+
+#endif //UNTITLED_FUNCTIONS_H

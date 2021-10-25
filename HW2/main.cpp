@@ -1,85 +1,140 @@
 #include <fstream>
 #include <iostream>
 #include "functions.h"
+#include <cmath>
+#include <valarray>
+
 
 using namespace std;
 
 
 int main() {
-    string file_name = "in.txt";
-    int variant;
-    cout << "Вариант: ";
-    cin >> variant;
 
-    ifstream input(file_name); // создаем объект класса ifstream
-    char *str = new char [1024];
-    int l=0;
-    while (!input.eof())
-    {
+    string file_name;
+    cin >> file_name;
+    double h;
+
+    ifstream input(file_name);
+    char *str = new char[1024];
+    int l = -1;
+    while (!input.eof()) {
         input.getline(str, 1024, '\n');
         l++;
     }
-    //cout << "l = " << l << endl;
     input.close();
 
-    ifstream file(file_name); // создаем объект класса ifstream
-    Vector2D Vectors[l];
-    int i = 0;
-    for (i = 0; i < l; i++){
-        file >> Vectors[i].x >> Vectors[i].y;
-        //cout << Vectors[i].x << " " << Vectors[i].y << endl;
-    }
+    ifstream file(file_name);
+    Barrier Barriers[l];
+    Vector2D V{};
 
-    Vector2D MVector = Vectors[0];
-    Vector2D Leftmost, Rightmost;
-    double rightangle, leftangle, anglee;
-    rightangle = leftangle = 0;
+    for (int i = 0; i < l; i++) {
+        if (i == 0) {
+            file >> h;
 
-    double distancee, rightdistance, leftdistance;
-    rightdistance = leftdistance = 1;
-    //bool flag;
-
-    if (variant == 1) {
-        for (i = 1; i < l; i++) {
-            //cout << Vectors[i].x << " " << Vectors[i].y << endl;
-            //flag = (isright(MVector, Vectors[i]));
-            //cout << "flag " << flag << endl;
-            //cout << Vectors[i].x << " " << Vectors[i].y << " h = " << distance(MVector, Vectors[i]) << endl;
-            anglee = angle(MVector, Vectors[i]);
-            //cout << anglee << endl;
-            if (isright(MVector, Vectors[i])) {
-                if (anglee > rightangle) {
-                    Rightmost = Vectors[i];
-                    //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
-                    rightangle = anglee;
-                }
-            } else {
-                if (anglee > leftangle) {
-                    Leftmost = Vectors[i];
-                    //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
-                    leftangle = anglee;
-                }
-            }
-            //cout << "---------" << endl;
+        } else if (i == 1) {
+            file >> V.x >> V.y;
+        } else {
+            file >> Barriers[i-2].x >> Barriers[i-2].h;
         }
     }
-    else {
-        for (i = 1; i < l; i++) {
-            distancee = distance(MVector, Vectors[i]);
-            if (isright(MVector, Vectors[i])) {
-                if (distancee > rightdistance) {
-                    Rightmost = Vectors[i];
-                    rightdistance = distancee;
-                }
+    file.close();
+
+    const double g = 9.81;
+    Point Point{};
+    Point.x = 0;
+    Point.y = h;
+    int cur_bar = -1;
+
+    /*
+    for (int q = 0; q<l-2; q++) {
+        cout << "Barriers[" << q << "].x = " << Barriers[q].x << endl;
+        cout << "Barriers[" << q << "].h = " << Barriers[q].h << endl;
+    }
+
+    cout << V.x << " " << V.y << endl;
+    cout << h << endl;
+    */
+
+
+
+
+    double fall_time;
+    bool flag = false;
+    double x_fall;
+
+    while (true) {
+        if (flag) break;
+        /*
+        cout << "---------------" << endl;
+        cout << "Point.x = " << Point.x << endl;
+        cout << "Point.y = " << Point.y << endl;
+        cout << "V.x = " << V.x << endl;
+        cout << "V.y = " << V.y << endl;
+         */
+
+        double fall_time_1 = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
+        double fall_time_2 = (V.y - sqrt(V.y*V.y+2*g*Point.y))/g;
+        //cout << fall_time_1 << " " << fall_time_2 << endl;
+
+        if (fall_time_1 > fall_time_2) {
+            fall_time = fall_time_1;
+        } else fall_time = fall_time_2;
+
+        //cout << "fall_time = " << fall_time << endl;
+        int direction = V.x/abs(V.x);
+        int m = cur_bar + direction;
+
+        while (true) {
+            double x = Barriers[m].x;
+            double bar = Barriers[m].h;
+            double t = (x - Point.x) / V.x;
+            //cout << "m = " << m << endl;
+            //cout << "t = " << t << endl;
+
+            if (m < 0) {
+                cout << 0 << endl;
+                return 0;
+            }
+            if (m > l-3) {
+                cout << l-2 << endl;
+                return 0;
+            }
+
+            if (fall_time < t) {
+                x_fall = Point.x + V.x*fall_time;
+                //cout << "Шар упал в точке x = " << x_fall << endl;
+                flag = true;
+                break;
+            }
+            double y = Point.y + V.y * t - (g * t * t) / 2;
+            //cout << "y = " << y << endl;
+            //cout << "h = " << bar << endl;
+
+            if (y >= bar) {
+                //cout << "Перелет" << endl;
+                m += direction;
+                continue;
             } else {
-                if (distancee > leftdistance) {
-                    Leftmost = Vectors[i];
-                    leftdistance = distancee;
-                }
+                V.x = -V.x;
+                V.y = V.y - g*t;
+                Point.x = x;
+                Point.y = y;
+                //cout << "Попали в препятствие с m = " << m <<  endl;
+                cur_bar = m;
+                break;
+
             }
         }
     }
 
-        cout << "Leftmost " << Leftmost.x << " " << Leftmost.y << endl;
-        cout << "Rightmost " << Rightmost.x << " " << Rightmost.y << endl;
+    if (x_fall < Barriers[0].x) cout << 0;
+
+
+    for (int n = 0; n < l-2; n++) {
+        if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
+            cout << n+1;
+        }
+    }
+
+
 }
