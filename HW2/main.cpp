@@ -10,8 +10,7 @@ using namespace std;
 
 int main() {
 
-    string file_name;
-    cin >> file_name;
+    string file_name = "in.txt";
     double h;
 
     char *str = new char [1024];
