@@ -1,8 +1,5 @@
 /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW0/CMakeFiles/rebuild_cache.dir
-/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW0/CMakeFiles/edit_cache.dir
-/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW0/CMakeFiles/HW1.dir
 /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/CMakeFiles/rebuild_cache.dir
 /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/CMakeFiles/edit_cache.dir
 /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/CMakeFiles/homework1.dir

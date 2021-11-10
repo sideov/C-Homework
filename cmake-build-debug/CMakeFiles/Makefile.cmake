@@ -32,7 +32,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/Platform/UnixPaths.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
-  "../HW0/CMakeLists.txt"
   "../HW1/CMakeLists.txt"
   "../HW2/CMakeLists.txt"
   "CMakeFiles/3.20.2/CMakeCCompiler.cmake"
@@ -49,14 +48,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "HW0/CMakeFiles/CMakeDirectoryInformation.cmake"
   "HW1/CMakeFiles/CMakeDirectoryInformation.cmake"
   "HW2/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "HW0/CMakeFiles/HW1.dir/DependInfo.cmake"
   "HW1/CMakeFiles/homework1.dir/DependInfo.cmake"
   "HW2/CMakeFiles/homework2.dir/DependInfo.cmake"
   )

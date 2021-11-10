@@ -63,37 +63,19 @@ CMAKE_BINARY_DIR = /Users/maximvasilev/CLionProjects/PR/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: HW0/all
 all: HW1/all
 all: HW2/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: HW0/preinstall
 preinstall: HW1/preinstall
 preinstall: HW2/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: HW0/clean
 clean: HW1/clean
 clean: HW2/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory HW0
-
-# Recursive "all" directory target.
-HW0/all: HW0/CMakeFiles/HW1.dir/all
-.PHONY : HW0/all
-
-# Recursive "preinstall" directory target.
-HW0/preinstall:
-.PHONY : HW0/preinstall
-
-# Recursive "clean" directory target.
-HW0/clean: HW0/CMakeFiles/HW1.dir/clean
-.PHONY : HW0/clean
 
 #=============================================================================
 # Directory level rules for directory HW1
@@ -126,39 +108,13 @@ HW2/clean: HW2/CMakeFiles/homework2.dir/clean
 .PHONY : HW2/clean
 
 #=============================================================================
-# Target rules for target HW0/CMakeFiles/HW1.dir
-
-# All Build rule for target.
-HW0/CMakeFiles/HW1.dir/all:
-	$(MAKE) $(MAKESILENT) -f HW0/CMakeFiles/HW1.dir/build.make HW0/CMakeFiles/HW1.dir/depend
-	$(MAKE) $(MAKESILENT) -f HW0/CMakeFiles/HW1.dir/build.make HW0/CMakeFiles/HW1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target HW1"
-.PHONY : HW0/CMakeFiles/HW1.dir/all
-
-# Build rule for subdir invocation for target.
-HW0/CMakeFiles/HW1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW0/CMakeFiles/HW1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles 0
-.PHONY : HW0/CMakeFiles/HW1.dir/rule
-
-# Convenience name for target.
-HW1: HW0/CMakeFiles/HW1.dir/rule
-.PHONY : HW1
-
-# clean rule for target.
-HW0/CMakeFiles/HW1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f HW0/CMakeFiles/HW1.dir/build.make HW0/CMakeFiles/HW1.dir/clean
-.PHONY : HW0/CMakeFiles/HW1.dir/clean
-
-#=============================================================================
 # Target rules for target HW1/CMakeFiles/homework1.dir
 
 # All Build rule for target.
 HW1/CMakeFiles/homework1.dir/all:
 	$(MAKE) $(MAKESILENT) -f HW1/CMakeFiles/homework1.dir/build.make HW1/CMakeFiles/homework1.dir/depend
 	$(MAKE) $(MAKESILENT) -f HW1/CMakeFiles/homework1.dir/build.make HW1/CMakeFiles/homework1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target homework1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target homework1"
 .PHONY : HW1/CMakeFiles/homework1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,7 +140,7 @@ HW1/CMakeFiles/homework1.dir/clean:
 HW2/CMakeFiles/homework2.dir/all:
 	$(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/depend
 	$(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target homework2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target homework2"
 .PHONY : HW2/CMakeFiles/homework2.dir/all
 
 # Build rule for subdir invocation for target.

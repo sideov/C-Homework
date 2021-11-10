@@ -39,11 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW0/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW1/cmake_install.cmake")
 endif()
 

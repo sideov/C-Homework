@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HW1
-
-# Build rule for target.
-HW1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HW1
-.PHONY : HW1
-
-# fast build rule for target.
-HW1/fast:
-	$(MAKE) $(MAKESILENT) -f HW0/CMakeFiles/HW1.dir/build.make HW0/CMakeFiles/HW1.dir/build
-.PHONY : HW1/fast
-
-#=============================================================================
 # Target rules for targets named homework1
 
 # Build rule for target.
@@ -163,7 +150,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HW1"
 	@echo "... homework1"
 	@echo "... homework2"
 .PHONY : help
