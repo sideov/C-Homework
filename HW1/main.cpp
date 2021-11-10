@@ -27,7 +27,7 @@ int main() {
 
     for (i = 0; i < l; i++){
         file >> Vectors[i].x >> Vectors[i].y;
-        cout << Vectors[i].x << " " << Vectors[i].y << endl;
+        //cout << Vectors[i].x << " " << Vectors[i].y << endl;
     }
 
 
