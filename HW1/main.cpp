@@ -39,7 +39,6 @@ int main() {
 
     double distancee, rightdistance, leftdistance;
     rightdistance = leftdistance = 0;
-    //bool flag;
 
     if (variant == 1) {
         for (i = 1; i < l; i++) {
@@ -52,14 +51,14 @@ int main() {
             //cout << anglee << " ";
             if (isright(MVector, Vectors[i])) {
                 //cout << "Right" << endl;
-                if (rightcos >= coss) {
+                if (coss <= rightcos) {
                     Rightmost = Vectors[i];
                     //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
                     rightcos = coss;
                 }
             } else {
                 //cout << "Left" << endl;
-                if (leftcos >= coss) {
+                if (coss <= leftcos) {
 
                     Leftmost = Vectors[i];
                     //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
