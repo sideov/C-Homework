@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     string file_name = "in.txt";
-    int variant = 2;
+    int variant = 1;
     //cout << "Вариант: ";
     //cin >> variant;
 
