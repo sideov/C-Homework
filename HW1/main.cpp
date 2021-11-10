@@ -33,8 +33,8 @@ int main() {
     Vector2D MVector = Vectors[0];
     //cout << MVector.x << " " << MVector.y << endl;
     Vector2D Leftmost, Rightmost;
-    double rightangle, leftangle, anglee;
-    rightangle = leftangle = 0;
+    double rightcos, leftcos, anglee;
+    rightcos = leftcos = 1;
 
     double distancee, rightdistance, leftdistance;
     rightdistance = leftdistance = 0;
@@ -46,22 +46,22 @@ int main() {
             //flag = (isright(MVector, Vectors[i]));
 
             //cout << Vectors[i].x << " " << Vectors[i].y << " h = " << distance(MVector, Vectors[i]) << endl;
-            anglee = angle(MVector, Vectors[i]);
+            double coss = cosangle(MVector, Vectors[i]);
             //cout << anglee << " ";
             if (isright(MVector, Vectors[i])) {
                 //cout << "Right" << endl;
-                if (anglee  >= rightangle) {
+                if (rightcos >= coss) {
                     Rightmost = Vectors[i];
                     //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
-                    rightangle = anglee;
+                    rightcos = coss;
                 }
             } else {
                 //cout << "Left" << endl;
-                if (anglee >= leftangle) {
+                if (leftcos >= coss) {
 
                     Leftmost = Vectors[i];
                     //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
-                    leftangle = anglee;
+                    leftcos = coss;
                 }
             }
             //cout << "---------" << endl;

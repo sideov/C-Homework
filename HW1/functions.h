@@ -8,7 +8,7 @@ struct Vector2D {
 };
 
 double operator*(Vector2D V1, Vector2D V2);
-double angle(Vector2D V1, Vector2D V2);
+double cosangle(Vector2D V1, Vector2D V2);
 bool isright(Vector2D V1, Vector2D V2);
 double distance(Vector2D V1, Vector2D V2);
 

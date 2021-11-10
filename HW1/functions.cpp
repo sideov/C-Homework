@@ -6,9 +6,9 @@ double operator*(Vector2D V1, Vector2D V2){
     return s;
 }
 
-double angle(Vector2D V1, Vector2D V2){
-    double angle = acos((V1 * V2)/(sqrt(V1*V1) * sqrt(V2*V2)));
-    return angle;
+double cosangle(Vector2D V1, Vector2D V2){
+    double cosangle = (V1 * V2)/(sqrt(V1*V1) * sqrt(V2*V2));
+    return cosangle;
 }
 
 bool isright(Vector2D V1, Vector2D V2) {
