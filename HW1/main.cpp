@@ -66,12 +66,12 @@ int main() {
         for (i = 1; i < l; i++) {
             distancee = distance(MVector, Vectors[i]);
             if (isright(MVector, Vectors[i])) {
-                if (distancee > rightdistance) {
+                if (distancee >= rightdistance) {
                     Rightmost = Vectors[i];
                     rightdistance = distancee;
                 }
             } else {
-                if (distancee > leftdistance) {
+                if (distancee >= leftdistance) {
                     Leftmost = Vectors[i];
                     leftdistance = distancee;
                 }
