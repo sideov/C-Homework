@@ -70,7 +70,7 @@ int main() {
     }
     else {
         for (i = 1; i < l; i++) {
-            distancee = distance(MVector, Vectors[i]);
+            distancee = abs(distance(MVector, Vectors[i]));
             if (isright(MVector, Vectors[i])) {
                 if (distancee >= rightdistance) {
                     Rightmost = Vectors[i];
