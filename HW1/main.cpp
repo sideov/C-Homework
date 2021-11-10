@@ -48,7 +48,7 @@ int main() {
 
             //cout << Vectors[i].x << " " << Vectors[i].y << " h = " << distance(MVector, Vectors[i]) << endl;
             double coss = cosangle(MVector, Vectors[i]);
-            coss = round(coss * 10000000000.0) / 10000000000.0;
+
             //cout << anglee << " ";
             if (isright(MVector, Vectors[i])) {
                 //cout << "Right" << endl;
