@@ -1,3 +1,3 @@
 # HW2
 
-variant #2
+variant #1

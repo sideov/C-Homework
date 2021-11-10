@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     string file_name = "in.txt";
-    int variant = 2;
+    int variant = 1;
     //cout << "Вариант: ";
     //cin >> variant;
 
@@ -29,10 +29,6 @@ int main() {
         file >> Vectors[i].x >> Vectors[i].y;
         //cout << Vectors[i].x << " " << Vectors[i].y << endl;
     }
-
-
-
-
 
     Vector2D MVector = Vectors[0];
     //cout << MVector.x << " " << MVector.y << endl;
