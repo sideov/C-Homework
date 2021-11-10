@@ -33,23 +33,19 @@ int main() {
             coss = std::round(coss * 100000000000000.0) / 100000000000000.0;
 
             //cout << anglee << " ";
-            if (y0*x < x0*y) {
-                //cout << "Right" << endl;
-                if (coss <= rightcos) {
-                    Rightmost_x = x;
-                    Rightmost_y = y;
-                    //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
-                    rightcos = coss;
-                }
-            } else {
-                //cout << "Left" << endl;
-                if (coss <= leftcos) {
+            if (coss <= leftcos && (y0*x < x0*y)) {
+                Leftmost_x = x;
+                Leftmost_y = y;
+                //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
+                leftcos = coss;
+            }
 
-                    Leftmost_x = x;
-                    Leftmost_y = y;
-                    //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
-                    leftcos = coss;
-                }
+            if (coss <= rightcos && (y0*x >= x0*y)) {
+                Rightmost_x = x;
+                Rightmost_y = y;
+                //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
+                rightcos = coss;
+
             }
             //cout << "---------" << endl;
         }
