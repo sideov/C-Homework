@@ -44,18 +44,21 @@ int main() {
         for (i = 1; i < l; i++) {
             //cout << Vectors[i].x << " " << Vectors[i].y << endl;
             //flag = (isright(MVector, Vectors[i]));
-            //cout << "flag " << flag << endl;
+
             //cout << Vectors[i].x << " " << Vectors[i].y << " h = " << distance(MVector, Vectors[i]) << endl;
             anglee = angle(MVector, Vectors[i]);
-            //cout << anglee << endl;
+            //cout << anglee << " ";
             if (isright(MVector, Vectors[i])) {
+                //cout << "Right" << endl;
                 if (anglee >= rightangle) {
                     Rightmost = Vectors[i];
                     //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
                     rightangle = anglee;
                 }
             } else {
+                //cout << "Left" << endl;
                 if (anglee >= leftangle) {
+
                     Leftmost = Vectors[i];
                     //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
                     leftangle = anglee;
