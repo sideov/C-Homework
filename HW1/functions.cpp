@@ -12,29 +12,20 @@ double angle(Vector2D V1, Vector2D V2){
 }
 
 bool isright(Vector2D V1, Vector2D V2) {
-    double a = V1.x;
-    double b = V1.y;
-    double x0 = V2.x;
-    double y0 = V2.y;
-    double h;
+    double x0 = V1.x;
+    double y0 = V1.y;
+    double x = V2.x;
+    double y = V2.y;
 
-    if (a != 0) {
-        h = -(y0 - b / a * x0);
-    }
-    else {
-        if (b > 0) h = x0;
-        else h = -x0;
-    }
-
-    //cout << "h = " << h << endl;
-
-    if (a >= 0) {
-        if (h >= 0) return true;
-        else return false;
-    }
-    else {
-        if (h > 0) return false;
-        else return true;
+    {
+        if (x0 * y - y0 * x > 0)
+        {
+            return false;   //лево
+        }
+        else
+        {
+            return true;//право
+        }
     }
 
 }
