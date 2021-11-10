@@ -1,42 +1,67 @@
-#include <stdlib.h>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include "functions.h"
 #include <cmath>
 
-int main()
-{
-    std::ifstream infile("in.txt");
+using namespace std;
 
-    int x, y;
 
-    int lx = 0, rx = 0, ly = 0, ry = 0;
-    double _rcos, _lcos;
-    _lcos = 1; _rcos = 1;
+int main() {
+    string file_name = "in.txt";
+    int variant = 1;
+    //cout << "Вариант: ";
+    //cin >> variant;
 
-    int x0, y0;
+    double rightcos, leftcos;
+    rightcos = leftcos = 1;
+
+    double distancee, rightdistance, leftdistance;
+    rightdistance = leftdistance = 0;
+    double x0, y0, x, y, Rightmost_x, Rightmost_y, Leftmost_x, Leftmost_y;
+
+    std::ifstream infile(file_name);
     infile >> x0 >> y0;
 
+    if (variant == 1) {
+        while (infile >> x >> y) {
 
-    while (infile >> x >> y)
-    {
+            double coss = (x0*x+y0*y)/(sqrt(x*x+y*y)*sqrt(x0*x0+y0*y0));
+            coss = std::round(coss * 100000000000000.0) / 100000000000000.0;
 
 
-        double cos = (x0*x+y0*y)/(sqrt(x*x+y*y)*sqrt(x0*x0+y0*y0));
-        cos = std::round(cos * 10000000000.0) / 10000000000.0;
+            if (coss <= leftcos && (y0*x < x0*y)) {
+                Leftmost_x = x;
+                Leftmost_y = y;
+                leftcos = coss;
+            }
 
-        if (cos <= _lcos && (y0*x < x0*y))
-        {
-            _lcos = cos;
-            lx = x; ly = y;
+            if (coss <= rightcos && (y0*x >= x0*y)) {
+                Rightmost_x = x;
+                Rightmost_y = y;
+                rightcos = coss;
 
+            }
         }
-        if (cos <= _rcos && (y0*x >= x0*y))
-        {
-            _rcos = cos;
-            rx = x; ry = y;
+
+    /*
+    else {
+        for (i = 1; i < l; i++) {
+            distancee = abs(distance(MVector, Vectors[i]));
+            if (isright(MVector, Vectors[i])) {
+                if (distancee >= rightdistance) {
+                    Rightmost = Vectors[i];
+                    rightdistance = distancee;
+                }
+            } else {
+                if (distancee >= leftdistance) {
+                    Leftmost = Vectors[i];
+                    leftdistance = distancee;
+                }
+            }
         }
+        */
     }
 
-    std::cout << "Leftmost: " << lx << " " << ly << "\n";
-    std::cout << "Rightmost: " << rx << " " << ry << "\n";
+    cout << "Leftmost: " << Leftmost_x << " " << Leftmost_y << endl;
+    cout << "Rightmost: " << Rightmost_x << " " << Rightmost_y << endl;
 }
