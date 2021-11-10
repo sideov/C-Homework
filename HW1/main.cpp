@@ -47,7 +47,7 @@ int main() {
             //cout << "flag " << flag << endl;
             //cout << Vectors[i].x << " " << Vectors[i].y << " h = " << distance(MVector, Vectors[i]) << endl;
             anglee = angle(MVector, Vectors[i]);
-            cout << anglee << endl;
+            //cout << anglee << endl;
             if (isright(MVector, Vectors[i])) {
                 if (anglee >= rightangle) {
                     Rightmost = Vectors[i];
