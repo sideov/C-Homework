@@ -48,13 +48,13 @@ int main() {
             anglee = angle(MVector, Vectors[i]);
             //cout << anglee << endl;
             if (isright(MVector, Vectors[i])) {
-                if (anglee > rightangle) {
+                if (anglee >= rightangle) {
                     Rightmost = Vectors[i];
                     //cout << "Rx Ry " << Rightmost.x << " " << Rightmost.y << endl;
                     rightangle = anglee;
                 }
             } else {
-                if (anglee > leftangle) {
+                if (anglee >= leftangle) {
                     Leftmost = Vectors[i];
                     //cout << "Lx Ly " << Leftmost.x << " " << Leftmost.y << endl;
                     leftangle = anglee;
