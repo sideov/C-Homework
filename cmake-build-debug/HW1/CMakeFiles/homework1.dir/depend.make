@@ -5,4 +5,5 @@ HW1/CMakeFiles/homework1.dir/functions.cpp.o: \
  ../HW1/functions.cpp \
  ../HW1/functions.h
 HW1/CMakeFiles/homework1.dir/main.cpp.o: \
+ ../HW1/functions.h \
  ../HW1/main.cpp

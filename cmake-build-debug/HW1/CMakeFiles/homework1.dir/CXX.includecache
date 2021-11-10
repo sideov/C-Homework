@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/maximvasilev/CLionProjects/PR/HW1/functions.h
+
 /Users/maximvasilev/CLionProjects/PR/HW1/main.cpp
-stdlib.h
+fstream
 -
 iostream
 -
-fstream
--
+functions.h
+/Users/maximvasilev/CLionProjects/PR/HW1/functions.h
 cmath
 -
 

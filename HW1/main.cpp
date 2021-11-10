@@ -17,7 +17,8 @@ int main() {
 
     double distancee, rightdistance, leftdistance;
     rightdistance = leftdistance = 0;
-    double x0, y0, x, y, Rightmost_x, Rightmost_y, Leftmost_x, Leftmost_y;
+    int x0, y0;
+    int x, y, Rightmost_x, Rightmost_y, Leftmost_x, Leftmost_y;
 
     std::ifstream infile(file_name);
     infile >> x0 >> y0;
@@ -26,7 +27,7 @@ int main() {
         while (infile >> x >> y) {
 
             double coss = (x0*x+y0*y)/(sqrt(x*x+y*y)*sqrt(x0*x0+y0*y0));
-            coss = std::round(coss * 100000000000000.0) / 100000000000000.0;
+            coss = std::round(coss * 10000000000.0) / 10000000000.0;
 
 
             if (coss <= leftcos && (y0*x < x0*y)) {
