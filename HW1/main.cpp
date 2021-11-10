@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     string file_name = "in.txt";
-    int variant = 1;
+    int variant = 2;
     //cout << "Вариант: ";
     //cin >> variant;
 
@@ -36,7 +36,7 @@ int main() {
     rightangle = leftangle = 0;
 
     double distancee, rightdistance, leftdistance;
-    rightdistance = leftdistance = 1;
+    rightdistance = leftdistance = 0;
     //bool flag;
 
     if (variant == 1) {
