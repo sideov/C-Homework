@@ -26,7 +26,7 @@ int main() {
 
 
     ifstream file(file_name);
-    Barrier Barriers[l];
+    Barrier* Barriers = new Barrier[l];
     Vector2D V{};
 
     for (int i = 0; i < l; i++) {
@@ -137,6 +137,6 @@ int main() {
             cout << n+1;
         }
     }
-
+delete[Barriers]
 
 }

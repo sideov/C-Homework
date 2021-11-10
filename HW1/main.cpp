@@ -22,7 +22,7 @@ int main() {
     base.close();
 
     ifstream file(file_name); // создаем объект класса ifstream
-    Vector2D Vectors[l];
+    Vector2D* Vectors = new Vector2D[l];
     int i = 0;
     for (i = 0; i < l; i++){
         file >> Vectors[i].x >> Vectors[i].y;
@@ -81,4 +81,5 @@ int main() {
 
     cout << "Leftmost " << Leftmost.x << " " << Leftmost.y << endl;
     cout << "Rightmost " << Rightmost.x << " " << Rightmost.y << endl;
+    delete[Vectors]
 }
