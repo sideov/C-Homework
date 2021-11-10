@@ -31,6 +31,7 @@ int main() {
     }
 
     Vector2D MVector = Vectors[0];
+    //cout << MVector.x << " " << MVector.y << endl;
     Vector2D Leftmost, Rightmost;
     double rightangle, leftangle, anglee;
     rightangle = leftangle = 0;
@@ -64,7 +65,7 @@ int main() {
         }
     }
     else {
-        for (i = 1; i < l; i++) {
+        for (i = 0; i < l; i++) {
             distancee = distance(MVector, Vectors[i]);
             if (isright(MVector, Vectors[i])) {
                 if (distancee >= rightdistance) {
