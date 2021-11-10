@@ -137,6 +137,6 @@ int main() {
             cout << n+1;
         }
     }
-delete[Barriers]
+delete Barriers;
 
 }
