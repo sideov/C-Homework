@@ -7,9 +7,10 @@ using namespace std;
 
 int main() {
     string file_name = "in.txt";
-    int variant = 2;
+    int variant = 1;
     //cout << "Вариант: ";
     //cin >> variant;
+
 
     char *str = new char [1024];
     int l=0;
