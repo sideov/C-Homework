@@ -8,7 +8,7 @@ double operator*(Vector2D V1, Vector2D V2){
 
 double cosangle(Vector2D V1, Vector2D V2){
     double cosangle = (V1 * V2)/(sqrt(V1*V1) * sqrt(V2*V2));
-    cosangle = round(cosangle * 10000000000.0) / 10000000000.0;
+    cosangle = round(cosangle * 100000000000000000000.0) / 100000000000000000000.0;
     return cosangle;
 }
 
