@@ -81,7 +81,7 @@ int main() {
         }
     }
 
-    cout << "Leftmost " << Leftmost.x << " " << Leftmost.y << endl;
-    cout << "Rightmost " << Rightmost.x << " " << Rightmost.y << endl;
+    cout << "Leftmost: " << Leftmost.x << " " << Leftmost.y << endl;
+    cout << "Rightmost: " << Rightmost.x << " " << Rightmost.y << endl;
     delete Vectors;
 }
