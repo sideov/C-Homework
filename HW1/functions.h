@@ -9,8 +9,8 @@ struct Vector2D {
 
 double operator*(Vector2D V1, Vector2D V2);
 double cosangle(Vector2D V1, Vector2D V2);
-bool isright(Vector2D V1, Vector2D V2);
-double distance(Vector2D V1, Vector2D V2);
+double distance(int a, int b, int x0, int y0);
+bool isright(int x0, int y0,int x,int y);
 
 
 #endif //UNTITLED_FUNCTIONS_H

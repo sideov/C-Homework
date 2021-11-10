@@ -12,11 +12,7 @@ double cosangle(Vector2D V1, Vector2D V2){
     return cosangle;
 }
 
-bool isright(Vector2D V1, Vector2D V2) {
-    double x0 = V1.x;
-    double y0 = V1.y;
-    double x = V2.x;
-    double y = V2.y;
+bool isright(int x0, int y0,int x,int y) {
 
     {
         if (x0 * y - y0 * x > 0)
@@ -31,11 +27,8 @@ bool isright(Vector2D V1, Vector2D V2) {
 
 }
 
-double distance(Vector2D V1, Vector2D V2) {
-    double a = V1.x;
-    double b = V1.y;
-    double x0 = V2.x;
-    double y0 = V2.y;
+double distance(int a, int b, int x0, int y0) {
+
     double h;
 
     if (b == 0 and a != 0) {
