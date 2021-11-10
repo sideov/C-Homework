@@ -11,7 +11,6 @@ int main() {
     //cout << "Вариант: ";
     //cin >> variant;
 
-
     char *str = new char [1024];
     int l=0;
     ifstream base(file_name);
@@ -25,10 +24,17 @@ int main() {
     ifstream file(file_name); // создаем объект класса ifstream
     Vector2D* Vectors = new Vector2D[l];
     int i = 0;
+
     for (i = 0; i < l; i++){
         file >> Vectors[i].x >> Vectors[i].y;
         //cout << Vectors[i].x << " " << Vectors[i].y << endl;
     }
+
+    for (i = 1; i < l; i++){
+        cout << Vectors[i].x << " " << Vectors[i].y << endl;
+    }
+
+
 
     Vector2D MVector = Vectors[0];
     //cout << MVector.x << " " << MVector.y << endl;
@@ -65,7 +71,7 @@ int main() {
         }
     }
     else {
-        for (i = 0; i < l; i++) {
+        for (i = 1; i < l; i++) {
             distancee = distance(MVector, Vectors[i]);
             if (isright(MVector, Vectors[i])) {
                 if (distancee >= rightdistance) {
