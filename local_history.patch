@@ -1,0 +1,101 @@
+Index: HW2/main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/HW2/main.cpp b/HW2/main.cpp
+--- a/HW2/main.cpp	
++++ b/HW2/main.cpp	(date 1636979246397)
+@@ -13,7 +13,6 @@
+     string file_name = "in.txt";
+     int h;
+ 
+-    char *str = new char [1024];
+     int l=0;
+     ifstream base(file_name);
+     double x, y;
+@@ -24,7 +23,6 @@
+     base.close();
+     l = l+1;
+ 
+-
+     ifstream file(file_name);
+     Barrier* Barriers = new Barrier[l];
+     Vector2D V{};
+@@ -40,12 +38,6 @@
+         }
+     }
+     file.close();
+-    /*
+-    for (int i=0; i < l-2; i++) {
+-        cout << Barriers[i].x << " " << Barriers[i].h << endl;
+-    }
+-    cout << "---" << endl;
+-     */
+ 
+ 
+     const double g = 9.81;
+@@ -102,10 +94,10 @@
+                 //cout << "АУТ ВПЕРЕД" << endl;
+                 x_fall = Point.x + V.x*fall_time;
+                 flag = true;
+-                cout << "Шар упал в точке x = " << x_fall << endl;
++                //cout << "Шар упал в точке x = " << x_fall << endl;
+                 break;
+             }
+-
++            //cout << "t = " << t << endl;
+             if (fall_time < t) {
+                 x_fall = Point.x + V.x*fall_time;
+                 //cout << "Шар упал в точке x = " << x_fall << endl;
+@@ -113,9 +105,9 @@
+                 break;
+             }
+             double y = Point.y + V.y * t - (g * t * t) / 2;
++
+             //cout << "y = " << y << endl;
+-            //cout << "h = " << bar << endl;
+-
++            //cout << "bar = " << bar << endl;
+             if (y >= bar) {
+                 //cout << "Перелет" << endl;
+                 m += direction;
+@@ -132,7 +124,7 @@
+             }
+         }
+     }
+-
++    cout << x_fall << endl;
+     if (x_fall < Barriers[0].x) cout << 0;
+     if (x_fall > Barriers[l-3].x) cout << l-2;
+ 
+Index: HW2/functions.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/HW2/functions.h b/HW2/functions.h
+--- a/HW2/functions.h	
++++ b/HW2/functions.h	(date 1636978666688)
+@@ -8,8 +8,8 @@
+ };
+ 
+ struct Vector2D {
+-    int x;
+-    int y;
++    double x;
++    double y;
+ };
+ 
+ struct Barrier {
+Index: HW2/functions.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/HW2/functions.cpp b/HW2/functions.cpp
+--- a/HW2/functions.cpp	
++++ b/HW2/functions.cpp	(date 1636978848642)
+@@ -1,2 +1,0 @@
+-
+-
