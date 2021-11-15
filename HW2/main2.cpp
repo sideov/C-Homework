@@ -11,18 +11,21 @@ using namespace std;
 int main() {
 
     string file_name = "in.txt";
-    int h;
+    double h;
 
-    char *str = new char [1024];
-    int l=0;
+    int l=1;
+    double r;
     ifstream base(file_name);
-    while (!base.eof())
+    base >> r;
+    while (base >> r >> r)
     {
-        base.getline(str, 1024, '\n');
         l++;
     }
     base.close();
-
+    if (l == 2) {
+        cout << 0;
+        return 0;
+    }
 
     ifstream file(file_name);
     Barrier* Barriers = new Barrier[l];
@@ -41,7 +44,7 @@ int main() {
     file.close();
 
 
-    const double g = 9.81;
+    const float g = 9.81;
     Point Point{};
     Point.x = 0;
     Point.y = h;
@@ -122,7 +125,6 @@ int main() {
         cout << 0;
         return 0;
     }
-
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
