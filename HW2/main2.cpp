@@ -45,6 +45,8 @@ int main() {
 
 
 
+
+
     const float g = 9.81;
     Point Point{};
     Point.x = 0;
@@ -55,20 +57,8 @@ int main() {
     bool flag = false;
 
     while (true) {
-        if (flag) break;
-        /*
-        cout << "---------------" << endl;
-        cout << "Point.x = " << Point.x << endl;
-        cout << "Point.y = " << Point.y << endl;
-        cout << "V.x = " << V.x << endl;
-        cout << "V.y = " << V.y << endl;
-         */
-
-
 
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
-
-        //cout << "fall_time = " << fall_time << endl;
         int direction = V.x/abs(V.x);
         int m = cur_bar + direction;
 
@@ -76,14 +66,12 @@ int main() {
             double x = Barriers[m].x;
             double bar = Barriers[m].h;
             double t = abs((x - Point.x)) / abs(V.x);
-            //cout << "m = " << m << endl;
-            //cout << "t = " << t << endl;
 
             if (m < 0) {
                 cout << 0 << endl;
                 return 0;
             }
-            if (m > l-3) {
+            if (m > l-2) {
                 cout << l-2 << endl;
                 return 0;
             }
@@ -92,14 +80,12 @@ int main() {
                 if (direction == 1) cout << m << endl;
                 else cout << m - direction << endl;
                 return 0;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
+
             }
             float y = Point.y + V.y * t - (g * t * t) / 2;
-            //cout << "y = " << y << endl;
-            //cout << "h = " << bar << endl;
+
 
             if (y >= bar) {
-                //cout << "Перелет" << endl;
                 m += direction;
                 continue;
             } else {
@@ -107,7 +93,6 @@ int main() {
                 V.y = V.y - g*t;
                 Point.x = x;
                 Point.y = y;
-                //cout << "Попали в препятствие с m = " << m <<  endl;
                 cur_bar = m;
                 break;
 
