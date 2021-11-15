@@ -53,7 +53,6 @@ int main() {
 
 
     bool flag = false;
-    double x_fall;
 
     while (true) {
         if (flag) break;
@@ -74,9 +73,9 @@ int main() {
         int m = cur_bar + direction;
 
         while (true) {
-            float x = Barriers[m].x;
-            float bar = Barriers[m].h;
-            float t = abs((x - Point.x)) / abs(V.x);
+            double x = Barriers[m].x;
+            double bar = Barriers[m].h;
+            double t = abs((x - Point.x)) / abs(V.x);
             //cout << "m = " << m << endl;
             //cout << "t = " << t << endl;
 
@@ -90,12 +89,10 @@ int main() {
             }
 
             if (fall_time < t) {
-                x_fall = Point.x + V.x*fall_time;
-                cout << m - direction + 1 << endl;
+                if (direction == 1) cout << m << endl;
+                else cout << m - direction << endl;
                 return 0;
                 //cout << "Шар упал в точке x = " << x_fall << endl;
-                flag = true;
-                break;
             }
             float y = Point.y + V.y * t - (g * t * t) / 2;
             //cout << "y = " << y << endl;
