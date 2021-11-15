@@ -44,7 +44,7 @@ int main() {
     file.close();
 
 
-    const float g = 9.81;
+    const double g = 9.81;
     Point Point{};
     Point.x = 0;
     Point.y = h;
@@ -54,6 +54,7 @@ int main() {
     while (true) {
 
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
+
         int direction = V.x/abs(V.x);
         int m = cur_bar + direction;
 
