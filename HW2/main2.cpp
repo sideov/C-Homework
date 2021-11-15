@@ -23,7 +23,7 @@ int main() {
     }
     base.close();
     if (l == 2) {
-        cout << 0;
+        cout << 0 << endl;
         return 0;
     }
 
