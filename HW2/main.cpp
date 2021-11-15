@@ -22,6 +22,10 @@ int main() {
         l++;
     }
     base.close();
+    if (l == 2) {
+        cout << 0;
+        return 0;
+    }
 
 
     ifstream file(file_name);
@@ -39,6 +43,7 @@ int main() {
         }
     }
     file.close();
+
 
 
 
