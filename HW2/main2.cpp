@@ -102,7 +102,7 @@ int main() {
                 return 0;
             }
             if (m > l-3) {
-                cout << l-2 << endl;
+                cout << l-4 << endl;
                 return 0;
             }
 
@@ -134,6 +134,7 @@ int main() {
     }
 
     if (x_fall < Barriers[0].x) cout << 0;
+
 
 
     for (int n = 0; n < l-2; n++) {
