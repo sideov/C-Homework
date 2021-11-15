@@ -48,10 +48,6 @@ int main() {
     int cur_bar = -1;
 
 
-
-
-
-
     double fall_time;
     bool flag = false;
     double x_fall;
@@ -65,6 +61,7 @@ int main() {
         cout << "V.x = " << V.x << endl;
         cout << "V.y = " << V.y << endl;
          */
+
 
         double fall_time_1 = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
         double fall_time_2 = (V.y - sqrt(V.y*V.y+2*g*Point.y))/g;
@@ -81,16 +78,16 @@ int main() {
         while (true) {
             double x = Barriers[m].x;
             double bar = Barriers[m].h;
-            double t = (x - Point.x) / V.x;
+            double t = abs((x - Point.x)) / abs(V.x);
             //cout << "m = " << m << endl;
             //cout << "t = " << t << endl;
 
             if (m < 0) {
-                cout << 0 << endl;
+                cout << 0;
                 return 0;
             }
             if (m > l-3) {
-                cout << l-4 << endl;
+                cout << l-4;
                 return 0;
             }
 
@@ -121,15 +118,15 @@ int main() {
         }
     }
 
-    if (x_fall < Barriers[0].x)
+    if (x_fall < Barriers[0].x) {
         cout << 0;
-
-
+        return 0;
+    }
 
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
-            cout << n+1 << endl;
+            cout << n+1;
             return 0;
         }
     }

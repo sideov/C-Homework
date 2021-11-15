@@ -14,15 +14,14 @@ int main() {
     double h;
 
     int l=1;
-    ifstream base(file_name);
     double r;
+    ifstream base(file_name);
     base >> r;
     while (base >> r >> r)
     {
         l++;
     }
     base.close();
-    l = l;
 
 
     ifstream file(file_name);
@@ -40,7 +39,6 @@ int main() {
         }
     }
     file.close();
-
 
 
 
@@ -82,34 +80,18 @@ int main() {
         while (true) {
             double x = Barriers[m].x;
             double bar = Barriers[m].h;
-            double t = (x - Point.x) / V.x;
+            double t = abs((x - Point.x)) / abs(V.x);
             //cout << "m = " << m << endl;
             //cout << "t = " << t << endl;
 
-            if (m < 0) {
-                //cout << "АУТ НАЗАД" << endl;
-                x_fall = Point.x + V.x*fall_time;
-                flag = true;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
 
-                break;
-            }
-            if (m > l-3) {
-                //cout << "АУТ ВПЕРЕД" << endl;
+            if (m < 0 or m > l-2 or fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
                 flag = true;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
                 break;
             }
-            //cout << "t = " << t << endl;
-            if (fall_time < t) {
-                x_fall = Point.x + V.x*fall_time;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
-                flag = true;
-                break;
-            }
+
             double y = Point.y + V.y * t - (g * t * t) / 2;
-
             //cout << "y = " << y << endl;
             //cout << "bar = " << bar << endl;
             if (y >= bar) {

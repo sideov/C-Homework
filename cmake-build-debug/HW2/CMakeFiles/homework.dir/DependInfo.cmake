@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/maximvasilev/CLionProjects/PR/HW2/functions.cpp" "/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/CMakeFiles/homework2.dir/functions.cpp.o"
-  "/Users/maximvasilev/CLionProjects/PR/HW2/main2.cpp" "/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/CMakeFiles/homework2.dir/main2.cpp.o"
+  "/Users/maximvasilev/CLionProjects/PR/HW2/functions.cpp" "/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/CMakeFiles/homework.dir/functions.cpp.o"
+  "/Users/maximvasilev/CLionProjects/PR/HW2/main.cpp" "/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2/CMakeFiles/homework.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
