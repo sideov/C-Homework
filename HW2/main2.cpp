@@ -66,6 +66,7 @@ int main() {
          */
 
 
+
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
         //cout << "fall_time = " << fall_time << endl;
@@ -90,7 +91,7 @@ int main() {
 
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
-                cout << m << endl;
+                cout << m - direction << endl;
                 return 0;
                 //cout << "Шар упал в точке x = " << x_fall << endl;
                 flag = true;
