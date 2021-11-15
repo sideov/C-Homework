@@ -13,17 +13,16 @@ int main() {
     string file_name = "in.txt";
     int h;
 
-    char *str = new char [1024];
-    int l=0;
+    int l=1;
     ifstream base(file_name);
     double x, y;
+    base >> x;
     while (base >> x >> y)
     {
         l++;
     }
     base.close();
-    l = l+1;
-
+    l = l;
 
     ifstream file(file_name);
     Barrier* Barriers = new Barrier[l];
@@ -40,12 +39,6 @@ int main() {
         }
     }
     file.close();
-    /*
-    for (int i=0; i < l-2; i++) {
-        cout << Barriers[i].x << " " << Barriers[i].h << endl;
-    }
-    cout << "---" << endl;
-     */
 
 
     const double g = 9.81;
