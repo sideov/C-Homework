@@ -28,7 +28,7 @@ int main() {
     }
 
     ifstream file(file_name);
-    Barrier* Barriers = new Barrier[l];
+    Barrier *Barriers = new Barrier[l];
     Vector2D V{};
 
     for (int i = 0; i < l; i++) {
@@ -44,17 +44,12 @@ int main() {
     file.close();
 
 
-
-
-
     const float g = 9.81;
     Point Point{};
     Point.x = 0;
     Point.y = h;
     int cur_bar = -1;
 
-
-    bool flag = false;
 
     while (true) {
 
@@ -71,14 +66,14 @@ int main() {
                 cout << 0 << endl;
                 return 0;
             }
-            if (m > l-2) {
+            if (m > l-3) {
                 cout << l-2 << endl;
                 return 0;
             }
 
             if (fall_time < t) {
-                if (direction == 1) cout << m << endl;
-                else cout << m - direction << endl;
+                if (direction == 1) cout << m;
+                else cout << m + 1;
                 return 0;
 
             }
@@ -99,4 +94,5 @@ int main() {
             }
         }
     }
+    delete Barriers;
 }
