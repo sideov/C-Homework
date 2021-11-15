@@ -44,14 +44,14 @@ int main() {
     file.close();
 
 
-    const float g = 9.81;
+
+    const double g = 9.81;
     Point Point{};
     Point.x = 0;
     Point.y = h;
     int cur_bar = -1;
 
 
-    double fall_time;
     bool flag = false;
     double x_fall;
 
@@ -66,13 +66,7 @@ int main() {
          */
 
 
-        double fall_time_1 = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
-        double fall_time_2 = (V.y - sqrt(V.y*V.y+2*g*Point.y))/g;
-        //cout << fall_time_1 << " " << fall_time_2 << endl;
-
-        if (fall_time_1 > fall_time_2) {
-            fall_time = fall_time_1;
-        } else fall_time = fall_time_2;
+        double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
         //cout << "fall_time = " << fall_time << endl;
         int direction = V.x/abs(V.x);
@@ -86,11 +80,11 @@ int main() {
             //cout << "t = " << t << endl;
 
             if (m < 0) {
-                cout << 0;
+                cout << 0 << endl;
                 return 0;
             }
             if (m > l-3) {
-                cout << l-2;
+                cout << l-2 << endl;
                 return 0;
             }
 
@@ -120,15 +114,15 @@ int main() {
             }
         }
     }
-
+    cout << x_fall << endl;
     if (x_fall < Barriers[0].x) {
-        cout << 0;
+        cout << 0 << endl;
         return 0;
     }
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
-            cout << n+1;
+            cout << n+1 << endl;
             return 0;
         }
     }
