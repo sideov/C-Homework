@@ -8,13 +8,13 @@ struct Point {
 };
 
 struct Vector2D {
-    int x;
-    int y;
+    double x;
+    double y;
 };
 
 struct Barrier {
-    int x;
-    int h;
+    double x;
+    double h;
 };
 
 

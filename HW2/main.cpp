@@ -105,7 +105,7 @@ int main() {
                 //cout << "Шар упал в точке x = " << x_fall << endl;
                 break;
             }
-
+            //cout << "t = " << t << endl;
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
                 //cout << "Шар упал в точке x = " << x_fall << endl;
@@ -113,9 +113,9 @@ int main() {
                 break;
             }
             double y = Point.y + V.y * t - (g * t * t) / 2;
-            //cout << "y = " << y << endl;
-            //cout << "h = " << bar << endl;
 
+            //cout << "y = " << y << endl;
+            //cout << "bar = " << bar << endl;
             if (y >= bar) {
                 //cout << "Перелет" << endl;
                 m += direction;
