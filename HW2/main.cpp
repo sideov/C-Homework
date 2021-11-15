@@ -16,12 +16,13 @@ int main() {
     char *str = new char [1024];
     int l=0;
     ifstream base(file_name);
-    while (!base.eof())
+    double x, y;
+    while (base >> x >> y)
     {
-        base.getline(str, 1024, '\n');
         l++;
     }
     base.close();
+    l = l+1;
 
 
     ifstream file(file_name);
@@ -43,7 +44,9 @@ int main() {
     for (int i=0; i < l-2; i++) {
         cout << Barriers[i].x << " " << Barriers[i].h << endl;
     }
+    cout << "---" << endl;
      */
+
 
     const double g = 9.81;
     Point Point{};
@@ -51,18 +54,8 @@ int main() {
     Point.y = h;
     int cur_bar = -1;
 
-    /*
-    for (int q = 0; q<l-2; q++) {
-        cout << "Barriers[" << q << "].x = " << Barriers[q].x << endl;
-        cout << "Barriers[" << q << "].h = " << Barriers[q].h << endl;
-    }
 
-    cout << V.x << " " << V.y << endl;
-    cout << h << endl;
-    */
-
-
-
+    //cout << Barriers[l-3].x << Barriers[l-3].h << endl;
 
     double fall_time;
     bool flag = false;
@@ -98,12 +91,19 @@ int main() {
             //cout << "t = " << t << endl;
 
             if (m < 0) {
-                cout << 0 << endl;
-                return 0;
+                //cout << "АУТ НАЗАД" << endl;
+                x_fall = Point.x + V.x*fall_time;
+                flag = true;
+                //cout << "Шар упал в точке x = " << x_fall << endl;
+
+                break;
             }
             if (m > l-3) {
-                cout << l-2 << endl;
-                return 0;
+                //cout << "АУТ ВПЕРЕД" << endl;
+                x_fall = Point.x + V.x*fall_time;
+                flag = true;
+                //cout << "Шар упал в точке x = " << x_fall << endl;
+                break;
             }
 
             if (fall_time < t) {
@@ -134,7 +134,7 @@ int main() {
     }
 
     if (x_fall < Barriers[0].x) cout << 0;
-
+    if (x_fall > Barriers[l-3].x) cout << l-2;
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
