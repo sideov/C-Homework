@@ -87,7 +87,7 @@ int main() {
                 return 0;
             }
             if (m > l-3) {
-                cout << l-4;
+                cout << l-2;
                 return 0;
             }
 
