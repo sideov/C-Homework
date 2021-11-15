@@ -129,8 +129,14 @@ int main() {
         }
     }
     //cout << x_fall << endl;
-    if (x_fall < Barriers[0].x) cout << 0;
-    if (x_fall > Barriers[l-3].x) cout << l-2;
+    if (x_fall < Barriers[0].x) {
+        cout << 0;
+        return 0;
+    }
+    if (x_fall > Barriers[l-3].x) {
+        cout << l-2;
+        return 0;
+    }
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){

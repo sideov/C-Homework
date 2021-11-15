@@ -133,7 +133,12 @@ int main() {
         }
     }
 
-    if (x_fall < Barriers[0].x) cout << 0;
+    if (x_fall < Barriers[0].x)
+    {
+        cout << 0;
+        return 0;
+    }
+
 
 
 
