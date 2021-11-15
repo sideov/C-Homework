@@ -3,6 +3,6 @@
 
 HW2/CMakeFiles/homework2.dir/functions.cpp.o: \
  ../HW2/functions.cpp
-HW2/CMakeFiles/homework2.dir/main2.cpp.o: \
+HW2/CMakeFiles/homework2.dir/main.cpp.o: \
  ../HW2/functions.h \
- ../HW2/main2.cpp
+ ../HW2/main.cpp

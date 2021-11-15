@@ -66,18 +66,18 @@ include HW2/CMakeFiles/homework2.dir/progress.make
 # Include the compile flags for this target's objects.
 include HW2/CMakeFiles/homework2.dir/flags.make
 
-HW2/CMakeFiles/homework2.dir/main2.cpp.o: HW2/CMakeFiles/homework2.dir/flags.make
-HW2/CMakeFiles/homework2.dir/main2.cpp.o: ../HW2/main2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object HW2/CMakeFiles/homework2.dir/main2.cpp.o"
-	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/homework2.dir/main2.cpp.o -c /Users/maximvasilev/CLionProjects/PR/HW2/main2.cpp
+HW2/CMakeFiles/homework2.dir/main.cpp.o: HW2/CMakeFiles/homework2.dir/flags.make
+HW2/CMakeFiles/homework2.dir/main.cpp.o: ../HW2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maximvasilev/CLionProjects/PR/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object HW2/CMakeFiles/homework2.dir/main.cpp.o"
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/homework2.dir/main.cpp.o -c /Users/maximvasilev/CLionProjects/PR/HW2/main.cpp
 
-HW2/CMakeFiles/homework2.dir/main2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/homework2.dir/main2.cpp.i"
-	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maximvasilev/CLionProjects/PR/HW2/main2.cpp > CMakeFiles/homework2.dir/main2.cpp.i
+HW2/CMakeFiles/homework2.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/homework2.dir/main.cpp.i"
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maximvasilev/CLionProjects/PR/HW2/main.cpp > CMakeFiles/homework2.dir/main.cpp.i
 
-HW2/CMakeFiles/homework2.dir/main2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/homework2.dir/main2.cpp.s"
-	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maximvasilev/CLionProjects/PR/HW2/main2.cpp -o CMakeFiles/homework2.dir/main2.cpp.s
+HW2/CMakeFiles/homework2.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/homework2.dir/main.cpp.s"
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug/HW2 && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maximvasilev/CLionProjects/PR/HW2/main.cpp -o CMakeFiles/homework2.dir/main.cpp.s
 
 HW2/CMakeFiles/homework2.dir/functions.cpp.o: HW2/CMakeFiles/homework2.dir/flags.make
 HW2/CMakeFiles/homework2.dir/functions.cpp.o: ../HW2/functions.cpp
@@ -94,13 +94,13 @@ HW2/CMakeFiles/homework2.dir/functions.cpp.s: cmake_force
 
 # Object files for target homework2
 homework2_OBJECTS = \
-"CMakeFiles/homework2.dir/main2.cpp.o" \
+"CMakeFiles/homework2.dir/main.cpp.o" \
 "CMakeFiles/homework2.dir/functions.cpp.o"
 
 # External object files for target homework2
 homework2_EXTERNAL_OBJECTS =
 
-HW2/homework2: HW2/CMakeFiles/homework2.dir/main2.cpp.o
+HW2/homework2: HW2/CMakeFiles/homework2.dir/main.cpp.o
 HW2/homework2: HW2/CMakeFiles/homework2.dir/functions.cpp.o
 HW2/homework2: HW2/CMakeFiles/homework2.dir/build.make
 HW2/homework2: HW2/CMakeFiles/homework2.dir/link.txt
