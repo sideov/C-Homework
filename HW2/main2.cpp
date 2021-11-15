@@ -91,7 +91,7 @@ int main() {
 
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
-                cout << m - direction << endl;
+                cout << m - direction + 1 << endl;
                 return 0;
                 //cout << "Шар упал в точке x = " << x_fall << endl;
                 flag = true;
@@ -117,18 +117,4 @@ int main() {
             }
         }
     }
-
-    if (x_fall < Barriers[0].x) {
-        cout << 0 << endl;
-        return 0;
-    }
-
-    for (int n = 0; n < l-2; n++) {
-        if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
-            cout << n+1 << endl;
-            return 0;
-        }
-    }
-    delete Barriers;
-
 }
