@@ -11,7 +11,7 @@ using namespace std;
 int main() {
 
     string file_name = "in.txt";
-    int h;
+    double h;
 
     int l=1;
     ifstream base(file_name);
@@ -24,8 +24,9 @@ int main() {
     base.close();
     l = l;
 
+
     ifstream file(file_name);
-    Barrier* Barriers = new Barrier[l];
+    Barrier* Barriers = new Barrier[l-2];
     Vector2D V{};
 
     for (int i = 0; i < l; i++) {
@@ -39,6 +40,8 @@ int main() {
         }
     }
     file.close();
+
+
 
 
     const double g = 9.81;
