@@ -13,8 +13,8 @@ struct Vector2D {
 };
 
 struct Barrier {
-    double x;
-    double h;
+    int x;
+    int h;
 };
 
 
