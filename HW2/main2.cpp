@@ -39,11 +39,7 @@ int main() {
         }
     }
     file.close();
-/*
-    for (int i=0; i < l-2; i++) {
-        cout << Barriers[i].x << " " << Barriers[i].h << endl;
-    }
-    */
+
 
     const double g = 9.81;
     Point Point{};
@@ -51,15 +47,7 @@ int main() {
     Point.y = h;
     int cur_bar = -1;
 
-    /*
-    for (int q = 0; q<l-2; q++) {
-        cout << "Barriers[" << q << "].x = " << Barriers[q].x << endl;
-        cout << "Barriers[" << q << "].h = " << Barriers[q].h << endl;
-    }
 
-    cout << V.x << " " << V.y << endl;
-    cout << h << endl;
-    */
 
 
 
@@ -134,10 +122,7 @@ int main() {
     }
 
     if (x_fall < Barriers[0].x)
-    {
         cout << 0;
-        return 0;
-    }
 
 
 

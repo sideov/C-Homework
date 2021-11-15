@@ -154,29 +154,29 @@ functions.cpp.s:
 	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/functions.cpp.s
 .PHONY : functions.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+main2.o: main2.cpp.o
+.PHONY : main2.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/main.cpp.o
-.PHONY : main.cpp.o
+main2.cpp.o:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/main2.cpp.o
+.PHONY : main2.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+main2.i: main2.cpp.i
+.PHONY : main2.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/main.cpp.i
-.PHONY : main.cpp.i
+main2.cpp.i:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/main2.cpp.i
+.PHONY : main2.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+main2.s: main2.cpp.s
+.PHONY : main2.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/main.cpp.s
-.PHONY : main.cpp.s
+main2.cpp.s:
+	cd /Users/maximvasilev/CLionProjects/PR/cmake-build-debug && $(MAKE) $(MAKESILENT) -f HW2/CMakeFiles/homework2.dir/build.make HW2/CMakeFiles/homework2.dir/main2.cpp.s
+.PHONY : main2.cpp.s
 
 # Help Target
 help:
@@ -190,9 +190,9 @@ help:
 	@echo "... functions.o"
 	@echo "... functions.i"
 	@echo "... functions.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main2.o"
+	@echo "... main2.i"
+	@echo "... main2.s"
 .PHONY : help
 
 
