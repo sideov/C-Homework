@@ -11,7 +11,7 @@ using namespace std;
 int main() {
 
     string file_name = "in.txt";
-    double h;
+    float h;
 
     int l=1;
     double r;
@@ -45,7 +45,7 @@ int main() {
 
 
 
-    const double g = 9.81;
+    const float g = 9.81;
     Point Point{};
     Point.x = 0;
     Point.y = h;
@@ -73,9 +73,9 @@ int main() {
         int m = cur_bar + direction;
 
         while (true) {
-            double x = Barriers[m].x;
-            double bar = Barriers[m].h;
-            double t = abs((x - Point.x)) / abs(V.x);
+            float x = Barriers[m].x;
+            float bar = Barriers[m].h;
+            float t = abs((x - Point.x)) / abs(V.x);
             //cout << "m = " << m << endl;
             //cout << "t = " << t << endl;
 
@@ -96,7 +96,7 @@ int main() {
                 flag = true;
                 break;
             }
-            double y = Point.y + V.y * t - (g * t * t) / 2;
+            float y = Point.y + V.y * t - (g * t * t) / 2;
             //cout << "y = " << y << endl;
             //cout << "h = " << bar << endl;
 

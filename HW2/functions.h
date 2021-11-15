@@ -3,18 +3,18 @@
 #define UNTITLED_FUNCTIONS_H
 
 struct Point {
-    double x;
-    double y;
+    float x;
+    float y;
 };
 
 struct Vector2D {
-    double x;
-    double y;
+    float x;
+    float y;
 };
 
 struct Barrier {
-    double x;
-    double h;
+    float x;
+    float h;
 };
 
 
