@@ -39,6 +39,11 @@ int main() {
         }
     }
     file.close();
+    /*
+    for (int i=0; i < l-2; i++) {
+        cout << Barriers[i].x << " " << Barriers[i].h << endl;
+    }
+     */
 
     const double g = 9.81;
     Point Point{};
