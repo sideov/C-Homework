@@ -11,7 +11,7 @@ using namespace std;
 int main() {
 
     string file_name = "in.txt";
-    double h;
+    int h;
 
     char *str = new char [1024];
     int l=0;
