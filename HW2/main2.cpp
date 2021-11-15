@@ -13,16 +13,16 @@ int main() {
     string file_name = "in.txt";
     int h;
 
-    int l=1;
+    char *str = new char [1024];
+    int l=0;
     ifstream base(file_name);
-    double r;
-    base >> r;
-    while (base >> r >> r)
+    while (!base.eof())
     {
+        base.getline(str, 1024, '\n');
         l++;
     }
     base.close();
-    l = l;
+
 
     ifstream file(file_name);
     Barrier* Barriers = new Barrier[l];
@@ -39,7 +39,11 @@ int main() {
         }
     }
     file.close();
-
+/*
+    for (int i=0; i < l-2; i++) {
+        cout << Barriers[i].x << " " << Barriers[i].h << endl;
+    }
+    */
 
     const double g = 9.81;
     Point Point{};
@@ -47,8 +51,18 @@ int main() {
     Point.y = h;
     int cur_bar = -1;
 
+    /*
+    for (int q = 0; q<l-2; q++) {
+        cout << "Barriers[" << q << "].x = " << Barriers[q].x << endl;
+        cout << "Barriers[" << q << "].h = " << Barriers[q].h << endl;
+    }
 
-    //cout << Barriers[l-3].x << Barriers[l-3].h << endl;
+    cout << V.x << " " << V.y << endl;
+    cout << h << endl;
+    */
+
+
+
 
     double fall_time;
     bool flag = false;
@@ -84,21 +98,14 @@ int main() {
             //cout << "t = " << t << endl;
 
             if (m < 0) {
-                //cout << "АУТ НАЗАД" << endl;
-                x_fall = Point.x + V.x*fall_time;
-                flag = true;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
-
-                break;
+                cout << 0 << endl;
+                return 0;
             }
             if (m > l-3) {
-                //cout << "АУТ ВПЕРЕД" << endl;
-                x_fall = Point.x + V.x*fall_time;
-                flag = true;
-                //cout << "Шар упал в точке x = " << x_fall << endl;
-                break;
+                cout << l-2 << endl;
+                return 0;
             }
-            //cout << "t = " << t << endl;
+
             if (fall_time < t) {
                 x_fall = Point.x + V.x*fall_time;
                 //cout << "Шар упал в точке x = " << x_fall << endl;
@@ -106,9 +113,9 @@ int main() {
                 break;
             }
             double y = Point.y + V.y * t - (g * t * t) / 2;
-
             //cout << "y = " << y << endl;
-            //cout << "bar = " << bar << endl;
+            //cout << "h = " << bar << endl;
+
             if (y >= bar) {
                 //cout << "Перелет" << endl;
                 m += direction;
@@ -125,15 +132,15 @@ int main() {
             }
         }
     }
-    //cout << x_fall << endl;
+
     if (x_fall < Barriers[0].x) cout << 0;
-    if (x_fall > Barriers[l-3].x) cout << l-2;
+
 
     for (int n = 0; n < l-2; n++) {
         if (x_fall > Barriers[n].x and x_fall < Barriers[n+1].x){
             cout << n+1;
         }
     }
-delete Barriers;
+    delete Barriers;
 
 }
