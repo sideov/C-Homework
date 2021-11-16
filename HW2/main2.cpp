@@ -45,11 +45,11 @@ int main() {
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
         if (m < 0) {
-            cout << 0 << endl;
+            cout << 1 << endl;
             return 0;
         }
         if (m > l-1) {
-            cout << l+1 << endl;
+            cout << l << endl;
             return 0;
         }
 
