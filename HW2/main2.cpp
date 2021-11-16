@@ -47,55 +47,53 @@ int main() {
     Point.x = 0;
     Point.y = h;
     int cur_bar = -1;
+    int direction = 1;
+
+
+
 
 
     while (true) {
 
-        int direction = V.x/abs(V.x);
         int m = cur_bar + direction;
+        double x = Barriers[m].x;
+        double bar = Barriers[m].h;
+        double t = abs((x - Point.x)) / abs(V.x);
+        double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
-        while (true) {
-            double x = Barriers[m].x;
-            double bar = Barriers[m].h;
-            double t = abs((x - Point.x)) / abs(V.x);
-            double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
+        if (m < 0) {
+            cout << 0 << endl;
+            return 0;
+        }
+        if (m > l-3) {
+            cout << l-2 << endl;
+            return 0;
+        }
 
-            if (m < 0) {
-                cout << 0 << endl;
-                return 0;
-            }
-            if (m > l-3) {
-                cout << l-2 << endl;
-                return 0;
-            }
+        if (fall_time < t) {
+            if (direction == 1) cout << m;
+            else cout << m + 1;
+            return 0;
 
-            if (fall_time < t) {
-                if (direction == 1) cout << m;
-                else cout << m + 1;
-                return 0;
+        }
+        float y = Point.y + V.y * t - (g * t * t) / 2;
 
-            }
-            float y = Point.y + V.y * t - (g * t * t) / 2;
-
-
-            if (y >= bar) {
-                V.x = V.x;
-                V.y = V.y-g*t;
-                m += direction;
-                Point.x = x;
-                Point.y = y;
-                cur_bar = m;
-                continue;
-            } else {
-                V.x = -V.x;
-                V.y = V.y - g*t;
-                Point.x = x;
-                Point.y = y;
-                cur_bar = m;
-                break;
-
-            }
+        if (y >= bar) {
+            V.x = V.x;
+            V.y = V.y-g*t;
+            cur_bar = m;
+            Point.x = x;
+            Point.y = y;
+            continue;
+        } else {
+            V.x = -V.x;
+            V.y = V.y - g*t;
+            Point.x = x;
+            Point.y = y;
+            cur_bar = m;
+            direction = -direction;
+            continue;
         }
     }
-    delete Barriers;
+
 }
