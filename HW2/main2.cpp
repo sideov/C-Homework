@@ -28,7 +28,6 @@ int main() {
     file.close();
 
 
-
     const double g = 9.81;
     Point Point{};
     Point.x = 0;
@@ -66,7 +65,7 @@ int main() {
         Point.y = y;
         cur_bar = m;
 
-        if (y < bar) {
+        if (y <= bar) {
             V.x = -V.x;
             direction = -direction;
         }
