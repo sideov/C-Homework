@@ -11,7 +11,7 @@ using namespace std;
 int main() {
 
     string file_name = "in.txt";
-    float h;
+    double h;
 
     int l=1;
     double r;
@@ -50,9 +50,6 @@ int main() {
     int direction = 1;
 
 
-
-
-
     while (true) {
 
         int m = cur_bar + direction;
@@ -76,23 +73,15 @@ int main() {
             return 0;
 
         }
-        float y = Point.y + V.y * t - (g * t * t) / 2;
+        double y = Point.y + V.y * t - (g * t * t) / 2;
+        V.y = V.y-g*t;
+        Point.x = x;
+        Point.y = y;
+        cur_bar = m;
 
-        if (y >= bar) {
-            V.x = V.x;
-            V.y = V.y-g*t;
-            cur_bar = m;
-            Point.x = x;
-            Point.y = y;
-            continue;
-        } else {
+        if (y < bar) {
             V.x = -V.x;
-            V.y = V.y - g*t;
-            Point.x = x;
-            Point.y = y;
-            cur_bar = m;
             direction = -direction;
-            continue;
         }
     }
 
