@@ -24,7 +24,8 @@ int main() {
     while (file >> B.x >> B.h) {
         Barriers.push_back(B);
     }
-    int l = Barriers.size() + 2;
+    int l = Barriers.size();
+    file.close();
 
 
 
@@ -48,8 +49,8 @@ int main() {
             cout << 0 << endl;
             return 0;
         }
-        if (m > l-3) {
-            cout << l-2 << endl;
+        if (m > l-1) {
+            cout << l << endl;
             return 0;
         }
 
