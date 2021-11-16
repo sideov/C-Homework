@@ -49,7 +49,7 @@ int main() {
             return 0;
         }
         if (m > l-1) {
-            cout << l << endl;
+            cout << l+1 << endl;
             return 0;
         }
 
