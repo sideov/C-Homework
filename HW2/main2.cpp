@@ -17,11 +17,9 @@ int main() {
     double r;
     ifstream base(file_name);
     base >> r;
-    while (base >> r >> r)
-    {
-        l++;
-    }
+    while (base >> r >> r) l++;
     base.close();
+
     if (l == 2) {
         cout << 0 << endl;
         return 0;
@@ -53,8 +51,6 @@ int main() {
 
     while (true) {
 
-        double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
-
         int direction = V.x/abs(V.x);
         int m = cur_bar + direction;
 
@@ -62,6 +58,7 @@ int main() {
             double x = Barriers[m].x;
             double bar = Barriers[m].h;
             double t = abs((x - Point.x)) / abs(V.x);
+            double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
             if (m < 0) {
                 cout << 0 << endl;
@@ -82,7 +79,12 @@ int main() {
 
 
             if (y >= bar) {
+                V.x = V.x;
+                V.y = V.y-g*t;
                 m += direction;
+                Point.x = x;
+                Point.y = y;
+                cur_bar = m;
                 continue;
             } else {
                 V.x = -V.x;
