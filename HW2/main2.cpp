@@ -33,7 +33,7 @@ int main() {
     Point.x = 0;
     Point.y = h;
     int cur_bar = -1;
-    int direction = 1;
+    int direction = V.x/abs(V.x);
 
 
     while (true) {
@@ -45,7 +45,7 @@ int main() {
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
         if (m < 0) {
-            if (direction == 1) cout << 0 << endl;
+            if (direction == -1) cout << 0 << endl;
             else cout << 1 << endl;
             return 0;
         }else if (m > l-1) {
