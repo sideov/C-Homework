@@ -3,6 +3,7 @@
 #include "functions.h"
 #include <cmath>
 #include <valarray>
+#include <vector>
 
 
 using namespace std;
@@ -11,35 +12,20 @@ using namespace std;
 int main() {
 
     string file_name = "in.txt";
+    vector <Barrier> Barriers;
     double h;
-
-    int l=1;
-    double r;
-    ifstream base(file_name);
-    base >> r;
-    while (base >> r >> r) l++;
-    base.close();
-
-    if (l == 2) {
-        cout << 0 << endl;
-        return 0;
-    }
+    Vector2D V{};
+    Barrier B;
 
     ifstream file(file_name);
-    Barrier *Barriers = new Barrier[l];
-    Vector2D V{};
+    file >> h;
+    file >> V.x >> V.y;
 
-    for (int i = 0; i < l; i++) {
-        if (i == 0) {
-            file >> h;
-
-        } else if (i == 1) {
-            file >> V.x >> V.y;
-        } else {
-            file >> Barriers[i-2].x >> Barriers[i-2].h;
-        }
+    while (file >> B.x >> B.h) {
+        Barriers.push_back(B);
     }
-    file.close();
+    int l = Barriers.size() + 2;
+
 
 
     const double g = 9.81;
