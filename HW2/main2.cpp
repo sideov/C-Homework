@@ -33,7 +33,7 @@ int main() {
     Point.x = 0;
     Point.y = h;
     int cur_bar = -1;
-    int direction = V.x/abs(V.x);
+    int direction = 1;
 
 
     while (true) {
