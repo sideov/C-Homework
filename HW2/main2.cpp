@@ -9,12 +9,16 @@
 using namespace std;
 
 
-int main(int argc, char** argv) {
-    string file_name = "";
-
+//int main(int argc, char** argv) {
+int main() {
+    //string file_name = "";
+    /*
     if (argc == 2) {
         file_name = string(argv[1]);
     }
+     */
+
+    string file_name = "in.txt";
     vector <Barrier> Barriers;
     double h;
     Vector2D V{};
@@ -42,20 +46,22 @@ int main(int argc, char** argv) {
     while (true) {
 
         int m = cur_bar + direction;
-        if (m<0) {
+        if (m < 0) {
             cout << 0;
             return 0;
         }
+        if (m > l-1) {
+            cout << l;
+            return 0;
+        }
+
         double x = Barriers[m].x;
         double bar = Barriers[m].h;
         double t = abs((x - Point.x)) / abs(V.x);
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
 
-        if (m > l-1) {
-            cout << l;
-            return 0;
-        }else if (fall_time < t) {
+        if (fall_time < t) {
             if (direction == 1) cout << m;
             else cout << m + 1;
             return 0;
