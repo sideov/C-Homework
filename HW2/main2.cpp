@@ -16,7 +16,6 @@ int main(int argc, char** argv) {
         file_name = string(argv[1]);
     }
 
-
     vector <Barrier> Barriers;
     double h;
     Vector2D V{};
