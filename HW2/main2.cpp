@@ -39,15 +39,17 @@ int main() {
     while (true) {
 
         int m = cur_bar + direction;
+        if (m<0) {
+            cout << 0;
+            return 0;
+        }
         double x = Barriers[m].x;
         double bar = Barriers[m].h;
         double t = abs((x - Point.x)) / abs(V.x);
         double fall_time = (V.y + sqrt(V.y*V.y+2*g*Point.y))/g;
 
-        if (m < 0) {
-            cout << 0;
-            return 0;
-        }else if (m > l-1) {
+
+        if (m > l-1) {
             cout << l;
             return 0;
         }else if (fall_time < t) {
