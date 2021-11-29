@@ -9,14 +9,13 @@
 using namespace std;
 
 
-//int main(int argc, char** argv) {
-int main() {
-    //string file_name = "";
-    /*
+int main(int argc, char** argv) {
+    string file_name = "";
+
     if (argc == 2) {
         file_name = string(argv[1]);
     }
-     */
+
 
     string file_name = "in.txt";
     vector <Barrier> Barriers;
