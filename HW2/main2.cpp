@@ -17,7 +17,6 @@ int main(int argc, char** argv) {
     }
 
 
-    string file_name = "in.txt";
     vector <Barrier> Barriers;
     double h;
     Vector2D V{};
